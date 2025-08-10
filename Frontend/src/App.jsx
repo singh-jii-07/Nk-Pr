@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Servies from "./Pages/Servies";
 import Media from "./Pages/Media";
+import Footer from "./Components/Footer/Footer";
 
 
 const router = createBrowserRouter([
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <Home/>
+        <Footer/>
       </div>
     ),
   },
@@ -25,6 +27,7 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
        <About/>
+       <Footer/>
       </div>
     ),
   },
@@ -34,6 +37,7 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <Servies/>
+        <Footer/>
       </div>
     ),
   },
@@ -43,6 +47,7 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <Contact/>
+        <Footer/>
       </div>
     ),
   },
@@ -51,7 +56,8 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar />
-      L<Media/>
+      <Media/>
+      <Footer/>
       </div>
     ),
   },

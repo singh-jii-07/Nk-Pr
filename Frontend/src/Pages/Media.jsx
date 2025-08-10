@@ -1,10 +1,9 @@
 import React from 'react'
+import Hero from '../Components/Home/Hero'
 
 const Media = () => {
   return (
-    <div>
-      media page
-    </div>
+ <Hero/>
   )
 }
 

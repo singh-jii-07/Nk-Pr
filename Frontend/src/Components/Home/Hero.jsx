@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
      
-      <div className="relative z-10 max-w-4xl">
+      <div className="relative z-10 max-w-4xl mx-48">
         
         <span className="inline-block px-5 py-2 rounded-full text-lg font-bold bg-[#0071AA] shadow-lg">
           NK PR & PROMOTIONS

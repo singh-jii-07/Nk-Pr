@@ -5,7 +5,7 @@ import { ImMenu2 } from "react-icons/im";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navbar = [
+  const links = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
@@ -13,58 +13,45 @@ const Navbar = () => {
     { name: "Media", path: "/media" },
   ];
 
-  return (
-    <nav className="bg-[#5364FF] text-white px-6 py-4 flex items-center justify-between fixed w-full z-50 shadow-lg">
-    
-      <div className="text-2xl font-bold">
-        <NavLink to="/">NK PR</NavLink>
-      </div>
+  const linkClass = ({ isActive }) =>
+    `transition-colors duration-300 ${
+      isActive ? "text-[#00F1FF] font-semibold" : "hover:text-[#FFAB3C]"
+    }`;
 
+  return (
+    <nav className="bg-[#0B1F33] text-white px-6 py-4 flex items-center justify-between fixed w-full z-50 shadow-[rgba(0,0,0,0.15)_0px_4px_10px]">
       
+      <NavLink to="/" className="text-2xl font-bold">
+        NK PR
+      </NavLink>
+
+  
       <ul className="hidden md:flex space-x-6">
-        {navbar.map((item, index) => (
-          <li key={index}>
-            <NavLink
-              to={item.path}
-              className={({ isActive }) =>
-                `transition-colors duration-300 ${
-                  isActive
-                    ? "text-[#FFAB3C] font-semibold"
-                    : "hover:text-[#00F1FF]"
-                }`
-              }
-            >
-              {item.name}
+        {links.map((link, i) => (
+          <li key={i}>
+            <NavLink to={link.path} className={linkClass}>
+              {link.name}
             </NavLink>
           </li>
         ))}
       </ul>
 
-      
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden text-white focus:outline-none"
-      >
-      <ImMenu2  size={20}/>
+     
+      <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+        <ImMenu2 size={20} />
       </button>
 
      
       {isOpen && (
-        <ul className="absolute top-16 left-0 w-full bg-[#5364FF] flex flex-col items-center space-y-4 py-4 md:hidden">
-          {navbar.map((item, index) => (
-            <li key={index}>
+        <ul className="absolute top-16 left-0 w-full bg-[#0B1F33] flex flex-col items-center space-y-4 py-4 md:hidden shadow-[rgba(0,0,0,0.15)_0px_4px_10px]">
+          {links.map((link, i) => (
+            <li key={i}>
               <NavLink
-                to={item.path}
+                to={link.path}
+                className={linkClass}
                 onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  `transition-colors duration-300 ${
-                    isActive
-                      ? "text-[#FFAB3C] font-semibold"
-                      : "hover:text-[#00F1FF]"
-                  }`
-                }
               >
-                {item.name}
+                {link.name}
               </NavLink>
             </li>
           ))}
