@@ -38,7 +38,7 @@ const Navbar = () => {
 
      
       <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
-        <ImMenu2 size={20} />
+        <ImMenu2 size={40} />
       </button>
 
      
