@@ -1,7 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { ImMenu2 } from "react-icons/im";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navbar = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -11,25 +14,62 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gray-900 text-white px-6 py-4 flex items-center justify-between">
-     
+    <nav className="bg-[#5364FF] text-white px-6 py-4 flex items-center justify-between fixed w-full z-50 shadow-lg">
+    
       <div className="text-2xl font-bold">
-        <Link to="/">Logo</Link>
+        <NavLink to="/">NK PR</NavLink>
       </div>
 
       
-      <ul className="flex space-x-6">
+      <ul className="hidden md:flex space-x-6">
         {navbar.map((item, index) => (
           <li key={index}>
-            <Link
+            <NavLink
               to={item.path}
-              className="hover:text-yellow-400 transition-colors duration-300"
+              className={({ isActive }) =>
+                `transition-colors duration-300 ${
+                  isActive
+                    ? "text-[#FFAB3C] font-semibold"
+                    : "hover:text-[#00F1FF]"
+                }`
+              }
             >
               {item.name}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
+
+      
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="md:hidden text-white focus:outline-none"
+      >
+      <ImMenu2  size={20}/>
+      </button>
+
+     
+      {isOpen && (
+        <ul className="absolute top-16 left-0 w-full bg-[#5364FF] flex flex-col items-center space-y-4 py-4 md:hidden">
+          {navbar.map((item, index) => (
+            <li key={index}>
+              <NavLink
+                to={item.path}
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  `transition-colors duration-300 ${
+                    isActive
+                      ? "text-[#FFAB3C] font-semibold"
+                      : "hover:text-[#00F1FF]"
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 };
