@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // ✅ Import Link
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navbar = [
@@ -7,27 +7,30 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
-    { name: "Media", path: "/media" }
+    { name: "Media", path: "/media" },
   ];
 
   return (
-    <div style={{ display: "flex", alignItems: "center", padding: "10px", background: "#eee" }}>
-      
-      <div style={{ marginRight: "20px" }}>
-        <h1>Logo</h1>
+    <nav className="bg-gray-900 text-white px-6 py-4 flex items-center justify-between">
+     
+      <div className="text-2xl font-bold">
+        <Link to="/">Logo</Link>
       </div>
 
-   
-      <ul style={{ display: "flex", listStyle: "none", gap: "20px", margin: 0, padding: 0 }}>
+      
+      <ul className="flex space-x-6">
         {navbar.map((item, index) => (
           <li key={index}>
-            <Link to={item.path} style={{ textDecoration: "none", color: "black" }}>
+            <Link
+              to={item.path}
+              className="hover:text-yellow-400 transition-colors duration-300"
+            >
               {item.name}
             </Link>
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 };
 
