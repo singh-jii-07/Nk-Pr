@@ -5,7 +5,7 @@ const Home = () => {
   <section className="bg-gray-100 py-16">
       <div className="container mx-auto px-6 lg:px-20 flex flex-col-reverse lg:flex-row items-center gap-10">
         
-        {/* Left Side - Text */}
+    
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             One Name for All Your Advertisement & PR Needs
@@ -24,10 +24,10 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Side - Image */}
+        
         <div className="flex-1 flex justify-center">
           <img
-            src="/hero-image.jpg"
+            src="https://imgs.search.brave.com/yQ1m1mOw_EwALErsHbZwu0Nrt1aWwsqAVW2XBpLHVMY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEyLzA5LzEwLzg0/LzM2MF9GXzEyMDkx/MDg0NTJfZkdkbXFt/bXY3SVRvMDNhcEFy/UFVBMzZ4aFduTm1D/T1MuanBn"
             alt="NK PR Campaign"
             className="w-full max-w-md rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
           />
