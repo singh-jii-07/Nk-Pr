@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section
-      className="relative h-screen flex items-center justify-center text-white text-center px-6"
+      className="relative h-screen flex items-center justify-center text-white text-center px-6 py-24"
       style={{
         backgroundImage:
           "url('https://imgs.search.brave.com/ebKLxUBXqc4YgrhdDNzP7uvpd9lac0RAHhOmsyCjSI0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzcyLzRj/LzMwLzcyNGMzMGUw/OGUxYjJhNmZhYTZj/ZTM3ZmNkOWY0MDcx/LmpwZw')",
