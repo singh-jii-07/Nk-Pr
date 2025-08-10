@@ -11,17 +11,17 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Dark overlay */}
+      
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-      {/* Content */}
+     
       <div className="relative z-10 max-w-4xl">
-        {/* Tagline */}
+        
         <span className="inline-block px-5 py-2 rounded-full text-lg font-bold bg-[#0071AA] shadow-lg">
           NK PR & PROMOTIONS
         </span>
 
-        {/* Heading */}
+       
         <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
           One Name for All Your Advertisement{" "}
           <span className="bg-gradient-to-r from-[#00F1FF] via-[#5364FF] to-[#FFAB3C] bg-clip-text text-transparent">
@@ -29,14 +29,14 @@ const Hero = () => {
           </span>
         </h1>
 
-        {/* Description */}
+        
         <p className="mt-4 text-lg text-gray-200">
           We are the fastest-growing PR agency in Bihar & Jharkhand with 10+
           years of expertise in political campaigns, media handling, and
           social media strategy.
         </p>
 
-        {/* Buttons */}
+       
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="/contact"
@@ -52,7 +52,7 @@ const Hero = () => {
           </a>
         </div>
 
-        {/* Stats */}
+     
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div className="p-4 bg-white/10 rounded-lg border border-white/20 shadow-lg hover:scale-105 transition">
             <h3 className="text-3xl font-bold text-[#00F1FF]">100+</h3>
