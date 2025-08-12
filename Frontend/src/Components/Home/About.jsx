@@ -1,12 +1,16 @@
-import React from 'react'
-
+import React ,{ useEffect }from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 const About = () => {
+    useEffect(() => {
+      AOS.init({ duration: 1000, once: true });
+    }, []);
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-10">
         
         
-        <div className="flex-1 text-center lg:text-left">
+        <div className="flex-1 text-center lg:text-left"data-aos="fade-right">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             About{" "}
             <span className="bg-gradient-to-r from-[#00F1FF] via-[#5364FF] to-[#FFAB3C] bg-clip-text text-transparent">
@@ -29,7 +33,7 @@ const About = () => {
         </div>
 
         
-        <div className="flex-1 grid grid-cols-2 gap-6">
+        <div className="flex-1 grid grid-cols-2 gap-6" data-aos="fade-left">
           <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#00F1FF] hover:scale-105 transition">
             <h3 className="text-3xl font-bold text-[#00F1FF]">6+</h3>
             <p className="text-gray-600">States Presence</p>

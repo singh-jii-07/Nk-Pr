@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section
       className="relative min-h-screen flex items-center justify-center text-white text-center px-4 sm:px-6 py-16"
@@ -14,30 +20,47 @@ const Hero = () => {
      
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-     
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8">
-        
-        <span className="inline-block px-4 py-2 text-sm sm:text-base rounded-full font-bold bg-[#0071AA] shadow-lg">
+      <div
+        className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8"
+        data-aos="fade-up"
+      >
+       
+        <span
+          className="inline-block px-4 py-2 text-sm sm:text-base rounded-full font-bold bg-[#0071AA] shadow-lg"
+          data-aos="zoom-in"
+        >
           NK PR & PROMOTIONS
         </span>
 
-        
-        <h1 className="mt-6 text-2xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">
+    
+        <h1
+          className="mt-6 text-2xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           One Name for All Your Advertisement{" "}
           <span className="bg-gradient-to-r from-[#00F1FF] via-[#5364FF] to-[#FFAB3C] bg-clip-text text-transparent">
             & PR Needs
           </span>
         </h1>
 
-       
-        <p className="mt-4 text-sm sm:text-base text-gray-200 max-w-md sm:max-w-xl mx-auto leading-relaxed">
+
+        <p
+          className="mt-4 text-sm sm:text-base text-gray-200 max-w-md sm:max-w-xl mx-auto leading-relaxed"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           We are the fastest-growing PR agency in Bihar & Jharkhand with 10+
           years of expertise in political campaigns, media handling, and social
           media strategy.
         </p>
 
-     
-        <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+    
+        <div
+          className="mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4"
+          data-aos="zoom-in"
+          data-aos-delay="600"
+        >
           <a
             href="/contact"
             className="w-full sm:w-auto px-6 py-3 text-sm font-semibold rounded-lg bg-[#5364FF] hover:bg-[#0071AA] shadow-md hover:shadow-lg hover:shadow-[#00F1FF]/50 transition"
@@ -52,19 +75,35 @@ const Hero = () => {
           </a>
         </div>
 
-        
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 px-2">
+       
+        <div
+          className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 px-2"
+          data-aos="fade-up"
+          data-aos-delay="800"
+        >
           <div className="p-4 bg-white/10 rounded-lg border border-white/20 shadow-lg hover:scale-105 transition">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#00F1FF]">100+</h3>
-            <p className="text-sm sm:text-base text-gray-300">Projects Delivered</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#00F1FF]">
+              100+
+            </h3>
+            <p className="text-sm sm:text-base text-gray-300">
+              Projects Delivered
+            </p>
           </div>
           <div className="p-4 bg-white/10 rounded-lg border border-white/20 shadow-lg hover:scale-105 transition">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#FFAB3C]">10+</h3>
-            <p className="text-sm sm:text-base text-gray-300">Years of Excellence</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#FFAB3C]">
+              10+
+            </h3>
+            <p className="text-sm sm:text-base text-gray-300">
+              Years of Excellence
+            </p>
           </div>
           <div className="p-4 bg-white/10 rounded-lg border border-white/20 shadow-lg hover:scale-105 transition">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#F56400]">50+</h3>
-            <p className="text-sm sm:text-base text-gray-300">Happy Clients</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#F56400]">
+              50+
+            </h3>
+            <p className="text-sm sm:text-base text-gray-300">
+              Happy Clients
+            </p>
           </div>
         </div>
       </div>

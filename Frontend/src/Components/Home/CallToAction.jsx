@@ -23,11 +23,12 @@ export default function JoinUsBanner() {
             Become part of a community that crafts compelling stories, builds
             lasting relationships, and drives impactful brand engagement.
           </p>
+         
           <button
             className="bg-[#00f1ff] hover:bg-[#00c1e0] text-black font-bold px-8 py-3 rounded-full flex items-center mx-auto gap-3 shadow-lg transition-all duration-300"
             onClick={() => alert("Redirecting to Login")}
           >
-            Login
+           Join Us
             <FaArrowRight className="w-5 h-5" />
           </button>
 
