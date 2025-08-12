@@ -5,6 +5,7 @@ import Services from '../Components/Home/Services';
 import FeaturedCampaigns from '../Components/Home/FeaturedCampaigns';
 import CallToAction from '../Components/Home/CallToAction';
 import AchievementsExperience from '../Components/Home/Exprience'
+import HowWeWor from '../Components/Home/Working'
 const Home = () => {
 return(
   
@@ -14,6 +15,7 @@ return(
   <Services/>
   <FeaturedCampaigns/>
   <AchievementsExperience/>
+  <HowWeWor/>
   <CallToAction/>
 </div>
   

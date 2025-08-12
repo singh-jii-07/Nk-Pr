@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 const stats = [
-  { icon: "📈", value: 5, suffix: "+", label: "Years in Political PR", color: "#5364FF" },
+  { icon: "📈", value: 10, suffix: "+", label: "Years in Political PR", color: "#5364FF" },
   { icon: "🗺️", value: 6, label: "States Campaign Presence", color: "#00F1FF" },
-  { icon: "🎯", value: 50, suffix: "+", label: "Campaigns Successfully Managed", color: "#FFAB3C" },
+  { icon: "🎯", value: 100, suffix: "+", label: "Campaigns Successfully Managed", color: "#FFAB3C" },
   { icon: "📅", value: 500, suffix: "+", label: "Events Organised on Ground", color: "#F56400" },
 ];
 
@@ -32,7 +32,7 @@ export default function AchievementsExperience() {
     <section className="py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
-          Our Achievements <span className="text-gray-700">& Experience</span>
+          Our Achievements <span className="text-[#5364FF]">& Experience</span>
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-16 text-lg">
           Proven strategies. Measurable impact. Unmatched results in political PR & campaign management.
@@ -113,7 +113,7 @@ export default function AchievementsExperience() {
           <div className="p-6 rounded-xl bg-white shadow-md border border-gray-100">
             <h3 className="text-xl font-bold mb-2 text-gray-800">Our Next Milestone</h3>
             <p className="text-gray-600">
-              Reaching <span className="font-semibold text-gray-800">10 states</span> with transformative political strategies by 2026.
+              Reaching <span className="font-semibold text-gray-800">Over india</span> with transformative political strategies by 2026.
             </p>
           </div>
         </div>
