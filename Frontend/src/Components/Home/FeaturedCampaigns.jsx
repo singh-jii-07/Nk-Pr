@@ -43,7 +43,7 @@ const FeaturedClients = () => {
 
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           
-          {/* Main Card */}
+          
           <div
             key={active}
             className="flex-1 rounded-2xl shadow-xl transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl"
@@ -52,7 +52,7 @@ const FeaturedClients = () => {
               border: "1px solid rgba(255,255,255,0.3)"
             }}
           >
-            {/* Image */}
+           
             <div className="relative overflow-hidden rounded-t-2xl">
               <img
                 src={clients[active].image}
@@ -64,7 +64,7 @@ const FeaturedClients = () => {
               </span>
             </div>
 
-            {/* Content */}
+            
             <div className="p-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {clients[active].name}
@@ -75,7 +75,7 @@ const FeaturedClients = () => {
             </div>
           </div>
 
-          {/* Thumbnails */}
+       
           <div className="flex lg:flex-col gap-5 overflow-x-auto lg:overflow-visible">
             {clients.map((client, index) => (
               <div
