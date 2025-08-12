@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const stats = [
   { icon: "📈", value: 10, suffix: "+", label: "Years in Political PR", color: "#5364FF" },
   { icon: "🗺️", value: 6, label: "States Campaign Presence", color: "#00F1FF" },
@@ -28,6 +29,9 @@ function useCountUp(target, duration = 1500) {
 }
 
 export default function AchievementsExperience() {
+    useEffect(() => {
+      AOS.init({ duration: 1000, once: true });
+    }, []);
   return (
     <section className="py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto text-center">
@@ -39,7 +43,7 @@ export default function AchievementsExperience() {
         </p>
 
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"data-aos="flip-down">
           {stats.map((s, i) => {
             const count = useCountUp(s.value);
             return (
