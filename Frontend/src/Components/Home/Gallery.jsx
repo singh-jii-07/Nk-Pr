@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Gallery = () => {
+   useEffect(() => {
+      AOS.init({ duration: 1000, once: true });
+    }, []);
   const galleryItems = [
     { img: "https://imgs.search.brave.com/P3PGWPBTvw2r3voprcr41Hrc5wvCe543J7w0UV9l78k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmVz/cy5mYXJtL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzAzL3Bv/bGl0aWNhbC1wci0x/LnBuZw", title: "Event Management" },
     { img: "https://imgs.search.brave.com/P3PGWPBTvw2r3voprcr41Hrc5wvCe543J7w0UV9l78k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmVz/cy5mYXJtL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzAzL3Bv/bGl0aWNhbC1wci0x/LnBuZw", title: "Press Coverage" },
@@ -24,7 +29,7 @@ const Gallery = () => {
         </div>
 
      
-        <div className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
+        <div className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6" data-aos="flip-left">
           {galleryItems.map((item, index) => (
             <div
               key={index}

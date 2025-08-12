@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   FaSearch,
   FaClipboardList,
@@ -51,6 +53,9 @@ const steps = [
 ];
 
 export default function HowWeWork() {
+    useEffect(() => {
+      AOS.init({ duration: 1000, once: true });
+    }, []);
   return (
     <section className="w-full py-20 px-4 md:px-12 bg-white">
    
@@ -64,7 +69,7 @@ export default function HowWeWork() {
       </div>
 
      
-      <div className="space-y-20 max-w-7xl mx-auto">
+      <div className="space-y-20 max-w-7xl mx-auto"data-aos="zoom-in-down">
         {steps.map((step, idx) => (
           <div
             key={idx}
