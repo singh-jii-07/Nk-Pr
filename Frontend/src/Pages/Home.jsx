@@ -6,6 +6,7 @@ import FeaturedCampaigns from '../Components/Home/FeaturedCampaigns';
 import CallToAction from '../Components/Home/CallToAction';
 import AchievementsExperience from '../Components/Home/Exprience'
 import HowWeWor from '../Components/Home/Working'
+import Gallery from '../Components/Home/Gallery';
 const Home = () => {
 return(
   
@@ -16,6 +17,7 @@ return(
   <FeaturedCampaigns/>
   <AchievementsExperience/>
   <HowWeWor/>
+  <Gallery/>
   <CallToAction/>
 </div>
   
