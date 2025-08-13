@@ -1,9 +1,14 @@
 import React from 'react'
 import AboutBanner from '../Components/About/Hero'
+import AboutSection from '../Components/About/About'
 
 const About = () => {
   return (
- <AboutBanner/>
+    <div>
+
+      <AboutBanner/>
+      <AboutSection/>
+    </div>
   )
 }
 
