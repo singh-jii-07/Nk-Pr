@@ -61,7 +61,7 @@ export default function HowWeWork() {
    
       <div className="w-full text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-          How We Work
+          How We <span className="text-[#5364FF]"> Work</span> 
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">
           From research to execution — our step-by-step process for campaign success.

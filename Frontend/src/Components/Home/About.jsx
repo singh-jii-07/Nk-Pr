@@ -26,7 +26,7 @@ const About = () => {
           </p>
           <a
             href="/about"
-            className="inline-block px-6 py-3 rounded-lg font-semibold bg-[#5364FF] text-white hover:bg-[#0071AA] transition shadow-md"
+            className="inline-block px-6 py-3 rounded-full font-semibold bg-[#5364FF] text-white hover:bg-[#0071AA] transition shadow-md"
           >
             Read More
           </a>

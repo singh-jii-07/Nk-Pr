@@ -10,25 +10,25 @@ const Services = () => {
       title: "Political Campaigns",
       desc: "Proven election strategies with strong on-ground presence and powerful outreach.",
       icon: <FaBullhorn size={40} />,
-      gradient: "bg-gradient-to-br from-[#5364FF] to-[#00F1FF]",
+      gradient: "bg-[#5364FF]",
     },
     {
       title: "Social Media Management",
       desc: "Full management of all platforms with creative content and targeted growth.",
       icon: <FaShareAlt size={40} />,
-      gradient: "bg-gradient-to-br from-[#5364FF] to-[#00F1FF]",
+      gradient: "bg-[#5364FF]",
     },
     {
       title: "Media & PR Handling",
       desc: "Strong media connections and event coverage to build your brand presence.",
       icon: <FaNewspaper size={40} />,
-      gradient: "bg-gradient-to-br from-[#00F1FF] to-[#5364FF]",
+      gradient: "bg-[#5364FF]",
     },
     {
       title: "Ground Research & Survey",
       desc: "In-depth field surveys and analysis to shape effective campaign strategies.",
       icon: <FaUsers size={40} />,
-      gradient: "bg-gradient-to-br from-[#00F1FF] to-[#5364FF]",
+      gradient: "bg-[#5364FF]",
     },
   ];
 

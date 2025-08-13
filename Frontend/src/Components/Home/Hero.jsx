@@ -26,7 +26,7 @@ const Hero = () => {
       >
        
         <span
-          className="inline-block px-4 py-2 text-sm sm:text-base rounded-full font-bold bg-[#0071AA] shadow-lg"
+          className="inline-block px-4 py-2 text-lg sm:text-base font-black border bg-white/10 rounded-full  border-white/20 shadow-lg text-white"
           data-aos="zoom-in"
         >
           NK PR & PROMOTIONS
@@ -63,13 +63,13 @@ const Hero = () => {
         >
           <a
             href="/contact"
-            className="w-full sm:w-auto px-6 py-3 text-sm font-semibold rounded-lg bg-[#5364FF] hover:bg-[#0071AA] shadow-md hover:shadow-lg hover:shadow-[#00F1FF]/50 transition"
+            className="w-full sm:w-auto px-6 py-3 text-sm font-semibold rounded-full bg-[#5364FF] hover:bg-[#0071AA] shadow-md hover:shadow-lg hover:shadow-[#00F1FF]/50 transition"
           >
             Get Started
           </a>
           <a
             href="/services"
-            className="w-full sm:w-auto px-6 py-3 text-sm font-semibold rounded-lg border border-[#00F1FF] text-[#00F1FF] hover:bg-[#00F1FF] hover:text-black shadow-md transition"
+            className="w-full sm:w-auto px-6 py-3 text-sm font-semibold rounded-full border border-[#00F1FF] text-[#00F1FF] hover:bg-[#00F1FF] hover:text-black shadow-md transition"
           >
             Learn More
           </a>
