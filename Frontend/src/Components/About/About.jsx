@@ -1,139 +1,141 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
+import React from "react";
 import "aos/dist/aos.css";
-import { FaBullhorn, FaUsers, FaChartLine, FaShareAlt } from "react-icons/fa";
+import AOS from "aos";
+import { FaBullseye, FaEye, FaCheckCircle } from "react-icons/fa";
+import AboutImage from "../../assets/aboutimage.png";
 
 const AboutSection = () => {
-  useEffect(() => {
+  React.useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  const stats = [
-    { label: "Years in Political PR", value: "5+", color: "#00E0FF" },
-    { label: "States Campaign Presence", value: "6", color: "#FFD700" },
-    { label: "Campaigns Successfully Managed", value: "50+", color: "#00E0FF" },
-    { label: "Media Collaborations", value: "100+", color: "#FFD700" },
-  ];
-
-  const services = [
-    {
-      icon: <FaBullhorn size={32} />,
-      title: "Political Campaign Strategy",
-      desc: "End-to-end planning & execution for impactful campaigns.",
-    },
-    {
-      icon: <FaShareAlt size={32} />,
-      title: "Social Media Management",
-      desc: "Creative content, engagement & growth across platforms.",
-    },
-    {
-      icon: <FaUsers size={32} />,
-      title: "Ground Research & Surveys",
-      desc: "Real-time field data to shape effective strategies.",
-    },
-    {
-      icon: <FaChartLine size={32} />,
-      title: "Media & PR Handling",
-      desc: "Strong media ties for positive and wide coverage.",
-    },
-  ];
-
-  const milestones = [
-    { year: "2019", event: "Jharkhand Vidhan Sabha Election" },
-    { year: "2020", event: "Bihar Assembly Election" },
-    { year: "2021", event: "Worked with Sikkim Governor" },
-    { year: "2022", event: "PR for Multiple MPs & Non-NDA Leaders" },
-  ];
-
   return (
-    <section className="bg-[#0B1F33] text-white">
-      {/* Intro */}
-      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            One Name for All Your PR & Advertising Needs
+    <section className="relative bg-white text-gray-800">
+      {/* Container */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        
+        {/* Title */}
+        <div className="text-center mb-16" data-aos="fade-down">
+          <span className="text-[#00B4D8] font-bold uppercase tracking-wider">
+            About Us
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold mt-3 mb-4">
+            Who We Are
           </h2>
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            At <span className="text-[#FFD700] font-semibold">NKPR and Promotions</span>, 
-            we specialize in political PR, election campaigns, and brand image building. 
-            With experience ranging from grassroots surveys to managing social media for top leaders, 
-            we bring expertise, creativity, and results.
-          </p>
-          <p className="text-gray-400">
-            Founded by a professional who worked with the Hon’ble Prime Minister’s research team, 
-            we’ve been part of high-impact campaigns across Bihar, Jharkhand, and beyond.
+          <p className="max-w-2xl mx-auto text-lg text-gray-600">
+            NKPR and Promotions is your trusted partner for political, brand, and
+            corporate communication strategies that deliver real, measurable impact.
           </p>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 gap-6" data-aos="fade-left">
-          {stats.map((stat, i) => (
-            <div
-              key={i}
-              className="bg-[#112240] rounded-lg p-6 text-center shadow-lg hover:scale-105 transition-transform"
-            >
-              <h3 className="text-3xl font-bold" style={{ color: stat.color }}>
-                {stat.value}
-              </h3>
-              <p className="text-gray-300 text-sm mt-2">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+        {/* About Company - Text + Image */}
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+          {/* Left Content */}
+          <div data-aos="fade-right">
+            <h3 className="text-3xl font-bold mb-4 text-[#00B4D8]">
+              About the Company
+            </h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              With years of expertise in PR and promotional campaigns, 
+              we specialize in building strategies that not only capture 
+              attention but also build lasting trust with the audience.
+              Our experience spans political campaigns, corporate branding, 
+              and large-scale public relations initiatives.
+            </p>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="text-[#00B4D8] mt-1">✔</span>
+                Over 50+ successful political campaigns managed
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#00B4D8] mt-1">✔</span>
+                Strong presence across 6 states in India
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#00B4D8] mt-1">✔</span>
+                Experienced in digital strategy, PR, and branding
+              </li>
+            </ul>
+          </div>
 
-      {/* Services */}
-      <div className="bg-white text-[#0B1F33] py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">
-            Our Expertise
-          </h3>
-          <div className="grid md:grid-cols-4 gap-8">
-            {services.map((service, i) => (
-              <div
-                key={i}
-                className="bg-gray-100 p-6 rounded-xl shadow-md text-center hover:shadow-lg hover:scale-105 transition"
-                data-aos="fade-up"
-                data-aos-delay={i * 100}
-              >
-                <div className="text-[#00E0FF] mb-4 flex justify-center">
-                  {service.icon}
-                </div>
-                <h4 className="font-semibold mb-2">{service.title}</h4>
-                <p className="text-sm text-gray-600">{service.desc}</p>
-              </div>
-            ))}
+          {/* Right Image */}
+          <div
+            className="relative rounded-3xl overflow-hidden shadow-lg max-w-lg mx-auto"
+            data-aos="fade-left"
+          >
+            <img
+              src={AboutImage}
+              alt="About NKPR"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
         </div>
-      </div>
 
-      {/* Timeline */}
-      <div className="max-w-5xl mx-auto px-6 py-20">
-        <h3 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">
-          Our Journey
-        </h3>
-        <div className="relative border-l border-[#00E0FF] pl-8 space-y-12">
-          {milestones.map((mile, i) => (
-            <div key={i} className="relative" data-aos="fade-up" data-aos-delay={i * 100}>
-              <div className="absolute -left-4 top-1 w-6 h-6 bg-[#00E0FF] rounded-full"></div>
-              <h4 className="text-xl font-semibold">{mile.year}</h4>
-              <p className="text-gray-300">{mile.event}</p>
+        {/* Mission / Vision / Values */}
+        <div className="grid md:grid-cols-3 gap-10">
+          
+          {/* Mission */}
+          <div
+            className="p-10 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500 relative group border border-gray-100"
+            data-aos="fade-up"
+          >
+            <div className="absolute inset-0 rounded-2xl border-2 border-[#00B4D8]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="flex items-center gap-4 mb-5">
+              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#00B4D8]/10">
+                <FaBullseye className="text-3xl text-[#00B4D8]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#00B4D8]">Our Mission</h3>
             </div>
-          ))}
-        </div>
-      </div>
+            <p className="text-gray-600 leading-relaxed">
+              To empower leaders, brands, and organizations with creative 
+              strategies that influence opinions, build trust, and create 
+              meaningful change.
+            </p>
+          </div>
 
-      {/* CTA */}
-      <div className="bg-gradient-to-r from-[#00E0FF] to-[#00FFD1] text-[#0B1F33] py-12 text-center">
-        <h3 className="text-2xl md:text-3xl font-bold mb-4">Let’s Win Together</h3>
-        <p className="mb-6">
-          Partner with NKPR & Promotions to amplify your political influence.
-        </p>
-        <a
-          href="#contact"
-          className="px-8 py-3 rounded-full font-medium border border-[#0B1F33] hover:bg-[#0B1F33] hover:text-white transition"
-        >
-          Contact Us
-        </a>
+          {/* Vision */}
+          <div
+            className="p-10 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500 relative group border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div className="absolute inset-0 rounded-2xl border-2 border-[#FF8800]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="flex items-center gap-4 mb-5">
+              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#FF8800]/10">
+                <FaEye className="text-3xl text-[#FF8800]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#FF8800]">Our Vision</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              To become India’s most trusted PR and political promotion 
+              agency, delivering ethical, impactful, and innovative 
+              communication strategies that stand the test of time.
+            </p>
+          </div>
+
+          {/* Values */}
+          <div
+            className="p-10 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500 relative group border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div className="absolute inset-0 rounded-2xl border-2 border-[#28A745]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="flex items-center gap-4 mb-5">
+              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#28A745]/10">
+                <FaCheckCircle className="text-3xl text-[#28A745]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#28A745]">Our Values</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              Integrity, innovation, transparency, and commitment to 
+              excellence are at the heart of everything we do for our 
+              clients and communities.
+            </p>
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
