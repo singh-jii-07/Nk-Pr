@@ -11,10 +11,10 @@ const AboutSection = () => {
 
   return (
     <section className="relative bg-white text-gray-800">
-      {/* Container */}
+    
       <div className="max-w-7xl mx-auto px-6 py-20">
         
-        {/* Title */}
+      
         <div className="text-center mb-16" data-aos="fade-down">
           <span className="text-[#00B4D8] font-bold uppercase tracking-wider">
             About Us
@@ -28,9 +28,9 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* About Company - Text + Image */}
+        
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          {/* Left Content */}
+        
           <div data-aos="fade-right">
             <h3 className="text-3xl font-bold mb-4 text-[#00B4D8]">
               About the Company
@@ -58,7 +58,7 @@ const AboutSection = () => {
             </ul>
           </div>
 
-          {/* Right Image */}
+          
           <div
             className="relative rounded-3xl overflow-hidden shadow-lg max-w-lg mx-auto"
             data-aos="fade-left"
@@ -72,10 +72,10 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Mission / Vision / Values */}
+      
         <div className="grid md:grid-cols-3 gap-10">
           
-          {/* Mission */}
+        
           <div
             className="p-10 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500 relative group border border-gray-100"
             data-aos="fade-up"
@@ -94,7 +94,7 @@ const AboutSection = () => {
             </p>
           </div>
 
-          {/* Vision */}
+          
           <div
             className="p-10 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500 relative group border border-gray-100"
             data-aos="fade-up"
@@ -114,7 +114,7 @@ const AboutSection = () => {
             </p>
           </div>
 
-          {/* Values */}
+          
           <div
             className="p-10 rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500 relative group border border-gray-100"
             data-aos="fade-up"
