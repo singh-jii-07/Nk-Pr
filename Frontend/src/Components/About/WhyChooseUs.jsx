@@ -14,7 +14,7 @@ const reasons = [
   {
     icon: <FaBullhorn className="w-10 h-10 text-[#FFAB3C]" />,
     title: "Proven Track Record",
-    desc: "5+ years managing high-stakes campaigns across 6 states with measurable, winning outcomes.",
+    desc: "10+ years managing high-stakes campaigns across 6 states with measurable, winning outcomes.",
   },
   {
     icon: <FaUsers className="w-10 h-10 text-[#00F1FF]" />,
@@ -57,19 +57,19 @@ const WhyChooseUs = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-white to-[#f0f4ff]" id="why-choose-us">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        {/* Section Title */}
-        <h2 className="text-4xl font-bold text-[#5364FF] mb-4">
+        
+        <h2 className="text-6xl font-bold text-[#5364FF] mb-4">
           Why Choose <span className="text-[#FFAB3C]">Us</span>
         </h2>
 
-        {/* Subheading / Description */}
+        
         <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
           We’re not just another PR agency — we’re your partners in building influence, 
           winning trust, and creating impact. Our mix of experience, innovation, and 
           grassroots connection makes us stand apart.
         </p>
 
-        {/* Cards Grid */}
+        
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((item, index) => (
             <div
