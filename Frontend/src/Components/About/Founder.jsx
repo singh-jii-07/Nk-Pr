@@ -8,7 +8,7 @@ const Founder = () => {
     <section className="py-20 bg-gradient-to-b from-white to-[#f0f4ff]" id="founder">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* Section Heading */}
+        
         <div className="text-center mb-16">
           <h2 className="text-5xl font-extrabold text-[#5364FF] tracking-tight">
             Leadership <span className="text-[#FFAB3C]">Vision</span>
@@ -19,21 +19,21 @@ const Founder = () => {
           </p>
         </div>
 
-        {/* Grid Layout */}
+      
         <div className="grid md:grid-cols-2 gap-14 items-center">
           
-          {/* Founder Image with Frame */}
+         
           <div className="flex justify-center md:justify-end">
             <div className="relative bg-white rounded-xl shadow-xl border-4 border-[#5364FF] p-2 hover:shadow-2xl hover:scale-105 transition-transform duration-500">
               
-              {/* Image fixed square */}
+             
               <img
                 src={FounderImage}
                 alt="Founder NKPR"
                 className="w-[350px] h-[350px] object-cover rounded-lg"
               />
               
-              {/* Nameplate */}
+              
               <div className="bg-[#5364FF] text-white text-center py-3 rounded-b-lg mt-2">
                 <h3 className="text-lg font-bold tracking-wide">Nilesh Singh</h3>
                 <p className="text-sm opacity-90">Founder & CEO, NKPR Promotions</p>
@@ -41,9 +41,9 @@ const Founder = () => {
             </div>
           </div>
 
-          {/* Founder Details */}
+          
           <div>
-            {/* Quote Highlight */}
+            
             <blockquote className="italic text-xl text-gray-700 border-l-4 border-[#5364FF] pl-5 mb-6 leading-relaxed">
               "At NKPR and Promotions, we believe in the power of communication to 
               inspire change, build trust, and create lasting impact. Our mission 
@@ -51,7 +51,7 @@ const Founder = () => {
               strategies that connect with people at every level."
             </blockquote>
 
-            {/* Description */}
+            
             <p className="text-gray-600 leading-relaxed mb-4">
               With years of expertise in political PR, corporate branding, and 
               promotional campaigns, our founder has established NKPR as a trusted 
@@ -65,7 +65,7 @@ const Founder = () => {
               blend grassroots connection with modern innovation.
             </p>
 
-            {/* Social Icons */}
+            
             <div className="flex gap-5">
               <Link
                 to="#"
