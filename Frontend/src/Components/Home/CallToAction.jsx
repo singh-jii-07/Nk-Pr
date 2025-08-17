@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function JoinUsBanner() {
   return (
-    <div className="w-full bg-black bg-opacity-95 relative overflow-hidden mb-20">
+    <div className="w-full bg-black bg-opacity-95 relative overflow-hidden">
       
       <div
         className="w-full flex justify-center items-center py-16 relative z-10"
