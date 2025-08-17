@@ -4,6 +4,7 @@ import AboutSection from "../Components/About/About";
 import WhyChooseUs from "../Components/About/WhyChooseUs";
 import Founder from "../Components/About/Founder";
 import Teaminfo from "../Components/About/Teaminfo";
+import Experience from '../Components/About/Experience'
 const About = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const About = () => {
       <WhyChooseUs />
       <Founder />
       <Teaminfo />
+      <Experience/>
     </div>
   );
 };
