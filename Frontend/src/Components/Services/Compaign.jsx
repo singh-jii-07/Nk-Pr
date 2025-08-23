@@ -2,11 +2,44 @@ import React from 'react'
 import { FaChartPie, FaBullhorn, FaCalendarAlt, FaUserTie, FaUsers, FaChartLine } from 'react-icons/fa'
 
 const Compaign = () => {
+  const features = [
+    { 
+      icon: <FaChartPie />, 
+      title: "SWOT & Voter Segmentation", 
+      desc: "In-depth analysis of strengths, weaknesses, opportunities, and threats to identify voter groups and tailor outreach effectively." 
+    },
+    { 
+      icon: <FaBullhorn />, 
+      title: "Message & Manifesto Positioning", 
+      desc: "Crafting sharp political messaging and positioning manifestos to connect emotionally with the public and build credibility." 
+    },
+    { 
+      icon: <FaCalendarAlt />, 
+      title: "Booth-level Planning & Calendar", 
+      desc: "Systematic scheduling and booth-level strategies to ensure disciplined execution and maximum voter coverage." 
+    },
+    { 
+      icon: <FaUserTie />, 
+      title: "Candidate & Opponent Profiling", 
+      desc: "Thorough research on candidate image and opponents’ weaknesses to design winning strategies at every stage." 
+    },
+    { 
+      icon: <FaUsers />, 
+      title: "Grassroots & Nukkad Coordination", 
+      desc: "Mobilizing strong nukkad teams and grassroots networks to establish personal connections with voters in every locality." 
+    },
+    { 
+      icon: <FaChartLine />, 
+      title: "Real-time Reports & Feedback", 
+      desc: "Delivering real-time data insights, surveys, and on-ground feedback to adapt quickly during the campaign." 
+    },
+  ];
+
   return (
     <section id="campaign-planning" className="relative py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-6xl mx-auto px-6">
         
-        {/* Upper Part */}
+    
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span 
             className="uppercase tracking-wide text-sm font-semibold text-[#5364FF]" 
@@ -39,16 +72,9 @@ const Compaign = () => {
           </p>
         </div>
 
-        {/* Lower Part: Cards */}
+        
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { icon: <FaChartPie />, title: "SWOT & Voter Segmentation" },
-            { icon: <FaBullhorn />, title: "Message & Manifesto Positioning" },
-            { icon: <FaCalendarAlt />, title: "Booth-level Planning & Calendar" },
-            { icon: <FaUserTie />, title: "Candidate & Opponent Profiling" },
-            { icon: <FaUsers />, title: "Grassroots & Nukkad Coordination" },
-            { icon: <FaChartLine />, title: "Real-time Reports & Feedback" },
-          ].map((item, i) => (
+          {features.map((item, i) => (
             <div
               key={i}
               data-aos="fade-up"
@@ -62,7 +88,7 @@ const Compaign = () => {
                 {item.title}
               </h3>
               <p className="mt-2 text-sm text-gray-600">
-                Tailored strategies ensuring precision and impact in every stage of the campaign.
+                {item.desc}
               </p>
             </div>
           ))}
