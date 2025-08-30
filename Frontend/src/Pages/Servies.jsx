@@ -4,6 +4,7 @@ import Compaign from '../Components/Services/Compaign'
 import SocialMediaManagement from '../Components/Services/SocialMediaManagement'
 import GroundResearch from '../Components/Services/GroundResearch'
 import MediaHandling from '../Components/Services/MediaHandling '
+import PoliticalConsulting from '../Components/Services/PoliticalConsulting '
 const Servies = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const Servies = () => {
       <SocialMediaManagement/>
       <GroundResearch/>
       <MediaHandling/>
+      <PoliticalConsulting/>
     </div>
   )
 }
