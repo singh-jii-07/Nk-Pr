@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../Components/Media&press/Hero'
 import PressMentions from '../Components/Media&press/PressMentions'
+import Event from '../Components/Media&press/Event'
 
 const Media = () => {
   return (
@@ -8,6 +9,7 @@ const Media = () => {
 
       <Hero/>
       <PressMentions/>
+      <Event/>
     </div>
   )
 }
