@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../Components/Home/Hero'
+import Hero from '../Components/Media&press/Hero'
 
 const Media = () => {
   return (
