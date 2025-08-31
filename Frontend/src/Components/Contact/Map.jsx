@@ -9,39 +9,39 @@ const MapSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[80vh] md:h-[90vh] ">
-      <div className="grid md:grid-cols-3 h-full ">
+    <section className="relative w-full">
+      <div className="grid md:grid-cols-3 h-auto">
         
-    
-<div
-  className="bg-gradient-to-br from-[#6A11CB] via-[#2575FC] to-[#FF416C] text-white flex flex-col justify-center p-10 md:p-16 space-y-6"
-  data-aos="fade-right"
->
-  <h2 className="text-3xl md:text-4xl font-bold">NKPR India</h2>
-  <p className="text-lg opacity-90">
-    Visit our office or connect online — we are always ready to support your campaign journey.
-  </p>
-
-  <ul className="space-y-4 text-lg">
-    <li className="flex items-center gap-3">
-      <FaMapMarkerAlt className="text-[#FFAB3C] text-xl" />
-      <span>Ranchi, Jharkhand</span>
-    </li>
-    <li className="flex items-center gap-3">
-      <FaPhoneAlt className="text-[#FFAB3C] text-xl" />
-      <span>+91 98765 43210</span>
-    </li>
-    <li className="flex items-center gap-3">
-      <FaEnvelope className="text-[#FFAB3C] text-xl" />
-      <span>nkprindia@gmail.com</span>
-    </li>
-  </ul>
-</div>
-
-
-    
+  
         <div
-          className="md:col-span-2 w-full h-screen"
+          className="bg-[#2575FC] text-white flex flex-col justify-center p-8 md:p-16 space-y-6"
+          data-aos="fade-right"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold">NKPR India</h2>
+          <p className="text-base md:text-lg opacity-90">
+            Visit our office or connect online — we are always ready to support
+            your campaign journey.
+          </p>
+
+          <ul className="space-y-4 text-base md:text-lg">
+            <li className="flex items-center gap-3">
+              <FaMapMarkerAlt className="text-[#FFAB3C] text-xl" />
+              <span>Ranchi, Jharkhand</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <FaPhoneAlt className="text-[#FFAB3C] text-xl" />
+              <span>+91 98765 43210</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <FaEnvelope className="text-[#FFAB3C] text-xl" />
+              <span>nkprindia@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+        
+        <div
+          className="md:col-span-2 w-full h-64 md:h-auto"
           data-aos="fade-left"
         >
           <iframe
@@ -51,7 +51,7 @@ const MapSection = () => {
             height="100%"
             allowFullScreen=""
             loading="lazy"
-            className="w-full h-full"
+            className="w-full h-full rounded-none md:rounded-lg"
           ></iframe>
         </div>
       </div>
@@ -60,3 +60,4 @@ const MapSection = () => {
 };
 
 export default MapSection;
+``
