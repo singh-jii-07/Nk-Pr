@@ -1,9 +1,11 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function JoinUsBanner() {
+    const navigate = useNavigate();
+
   return (
-    <div className="w-full bg-black bg-opacity-95 relative overflow-hidden">
+    <div className="w-full bg-black bg-opacity-95 relative overflow-hidden my-10">
       
       <div
         className="w-full flex justify-center items-center py-16 relative z-10"
@@ -24,13 +26,13 @@ export default function JoinUsBanner() {
             lasting relationships, and drives impactful brand engagement.
           </p>
          
-          <button
-            className="bg-[#00f1ff] hover:bg-[#00c1e0] text-black font-bold px-8 py-3 rounded-full flex items-center mx-auto gap-3 shadow-lg transition-all duration-300"
-            onClick={() => alert("Redirecting to Login")}
-          >
-           Join Us
-            <FaArrowRight className="w-5 h-5" />
-          </button>
+<button
+      className="bg-[#00f1ff] hover:bg-[#00c1e0] text-black font-bold px-8 py-3 rounded-full flex items-center mx-auto gap-3 shadow-lg transition-all duration-300"
+      onClick={() => navigate("/contact")}
+    >
+      Join Us
+      <FaArrowRight className="w-5 h-5" />
+    </button>
 
          
         </div>
