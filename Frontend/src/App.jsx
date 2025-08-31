@@ -50,17 +50,8 @@ const router = createBrowserRouter([
         <Footer/>
       </div>
     ),
-  },
-  {
-    path: "/media",
-    element: (
-      <div>
-        <Navbar />
-      <Media/>
-      <Footer/>
-      </div>
-    ),
-  },
+  }
+
 ]);
 
 function App() {
