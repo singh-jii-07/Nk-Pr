@@ -42,7 +42,7 @@ const ContactSection = () => {
     formData.append("location", selectedLocation);
 
     emailjs
-      .send("your_service_id", "your_template_id", Object.fromEntries(formData), "your_public_key")
+      .send("service_0qas39a", "template_wxds4ma", Object.fromEntries(formData), "20S0s7npaKxX62oCi")
       .then(
         () => setStatus("Message sent successfully!"),
         (error) => {
