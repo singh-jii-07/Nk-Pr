@@ -6,7 +6,8 @@ import FeaturedCampaigns from '../Components/Home/FeaturedCampaigns';
 import CallToAction from '../Components/Home/CallToAction';
 import AchievementsExperience from '../Components/Home/Exprience'
 import HowWeWor from '../Components/Home/Working'
-import Gallery from '../Components/Home/Gallery';
+// import Gallery from '../Components/Home/Gallery';
+import { FocusCardsDemo } from '../Components/Home/FocusCards';
 const Home = () => {
 return(
   
@@ -17,7 +18,8 @@ return(
   <FeaturedCampaigns/>
   <AchievementsExperience/>
   <HowWeWor/>
-  <Gallery/>
+  {/* <Gallery/> */}
+  <FocusCardsDemo/>
   <CallToAction/>
 </div>
   
