@@ -20,6 +20,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   const links = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -38,23 +43,23 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-50 transition-all duration-500 ${
+      className={`fixed z-50 transition-all duration-500 left-0 ${
         scrolled
-          ? "top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] bg-white/30 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 px-6 py-3"
-          : "top-0 left-0 w-full bg-transparent px-6 py-5"
+          ? "top-4 w-full sm:left-1/2 sm:-translate-x-1/2 sm:w-[90%] md:w-[80%] bg-white/30 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 px-3 sm:px-6 py-3"
+          : "top-0 w-full bg-transparent px-3 sm:px-6 py-5"
       } flex items-center justify-between`}
+      style={{ maxWidth: "100vw" }}
     >
-    
       <Link
         to="/"
         className={`text-lg sm:text-2xl font-bold tracking-wide ${
           scrolled ? "text-black" : "text-white"
         }`}
+        style={{ whiteSpace: "nowrap" }}
       >
         NK PR
       </Link>
 
-      
       <ul className="hidden md:flex space-x-6 lg:space-x-8">
         {links.map((link, i) => (
           <li key={i}>
@@ -65,36 +70,42 @@ const Navbar = () => {
         ))}
       </ul>
 
-      
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`${scrolled ? "text-black" : "text-white"} md:hidden`}
+        aria-label="Open menu"
       >
         <ImMenu2 size={26} />
       </button>
 
-      
+      {/* Mobile Menu */}
       {isOpen && (
-        <ul className="absolute top-14 right-2 w-[90vw] bg-white/90 backdrop-blur-lg flex flex-col items-center space-y-3 py-5 rounded-xl border border-gray-200 shadow-xl md:hidden">
-          {links.map((link, i) => (
-            <li key={i}>
-              <Link
-                to={link.path}
-                className={`${
-                  location.pathname === link.path
-                    ? "text-[#00F1FF] font-semibold"
-                    : "text-black hover:text-[#00F1FF]"
-                } text-lg`}
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="fixed inset-0 z-50 bg-black/40 md:hidden" onClick={() => setIsOpen(false)}>
+          <ul
+            className="absolute top-16 right-2 left-2 mx-auto w-[96vw] max-w-xs bg-white/95 backdrop-blur-lg flex flex-col items-center space-y-3 py-6 rounded-xl border border-gray-200 shadow-xl"
+            style={{ maxWidth: "96vw" }}
+            onClick={e => e.stopPropagation()}
+          >
+            {links.map((link, i) => (
+              <li key={i} className="w-full text-center">
+                <Link
+                  to={link.path}
+                  className={`block py-2 ${
+                    location.pathname === link.path
+                      ? "text-[#00F1FF] font-semibold"
+                      : "text-black hover:text-[#00F1FF]"
+                  } text-lg`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </nav>
   );
 };
 
-export default Navbar;  
+export default Navbar;
