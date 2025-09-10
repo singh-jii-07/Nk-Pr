@@ -46,19 +46,20 @@ const FeaturedClients = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-[#f5f9ff] to-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-4xl font-bold text-center mb-14"
+          className="text-3xl sm:text-4xl font-bold text-center mb-10 sm:mb-14"
           data-aos="fade-up"
         >
           Featured <span className="text-[#5364FF]">Clients & Campaigns</span>
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-8 items-center">
+          {/* Active Client Card */}
           <div
             key={active}
             data-aos="zoom-in"
-            className="flex-1 rounded-2xl shadow-xl transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl"
+            className="flex-1 rounded-2xl shadow-xl transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl w-full"
             style={{
               background: "linear-gradient(145deg, #ffffff, #e6ecff)",
               border: "1px solid rgba(255,255,255,0.3)"
@@ -68,25 +69,26 @@ const FeaturedClients = () => {
               <img
                 src={clients[active].image}
                 alt={clients[active].name}
-                className="w-full h-80 object-cover transition-transform duration-700 hover:scale-105"
+                className="w-full h-56 sm:h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105"
               />
-              <span className="absolute top-4 left-4 bg-[#5364FF] text-white text-sm px-3 py-1 rounded-full shadow-md">
+              <span className="absolute top-4 left-4 bg-[#5364FF] text-white text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-full shadow-md">
                 {clients[active].category}
               </span>
             </div>
 
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">
+            <div className="p-4 sm:p-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3">
                 {clients[active].name}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 {clients[active].description}
               </p>
             </div>
           </div>
 
+          {/* Thumbnails */}
           <div
-            className="flex lg:flex-col gap-5 overflow-x-auto lg:overflow-visible"
+            className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:flex lg:flex-col gap-4 sm:gap-5"
             data-aos="fade-left"
           >
             {clients.map((client, index) => (
@@ -100,7 +102,7 @@ const FeaturedClients = () => {
                 }`}
               >
                 <div
-                  className={`rounded-full overflow-hidden border-4 ${
+                  className={`rounded-full overflow-hidden border-2 sm:border-4 ${
                     active === index
                       ? "border-transparent"
                       : "border-gray-200 hover:border-[#FFAB3C]"
@@ -109,7 +111,7 @@ const FeaturedClients = () => {
                   <img
                     src={client.image}
                     alt={client.name}
-                    className="w-20 h-20 object-cover rounded-full"
+                    className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-cover rounded-full"
                   />
                 </div>
               </div>
