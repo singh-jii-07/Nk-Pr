@@ -9,13 +9,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -32,19 +27,22 @@ const Navbar = () => {
       location.pathname === path
         ? "text-[#00F1FF] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-[#00F1FF]"
         : scrolled
-        ? "text-black hover:text-[#FFAB3C]" 
+        ? "text-black hover:text-[#FFAB3C]"
         : "text-white hover:text-[#FFAB3C]"
     }`;
 
   return (
     <nav
-      className={`fixed z-50 transition-all duration-500 ${
-        scrolled
-          ? "top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] bg-white/30 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 px-6 py-3"
-          : "top-0 left-0 w-full bg-transparent px-6 py-5"
-      } flex items-center justify-between`}
+      className={`fixed z-50 transition-all duration-500
+        left-1/2 -translate-x-1/2 flex items-center justify-between
+        ${scrolled
+          ? "top-3 bg-white/30 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 py-3 px-4"
+          : "top-0 bg-transparent py-5 px-4"
+        }
+        w-[95%] sm:w-[90%] md:w-[80%] lg:w-[75%]
+      `}
     >
-    
+      {/* Logo */}
       <Link
         to="/"
         className={`text-lg sm:text-2xl font-bold tracking-wide ${
@@ -54,7 +52,7 @@ const Navbar = () => {
         NK PR
       </Link>
 
-      
+      {/* Desktop Nav */}
       <ul className="hidden md:flex space-x-6 lg:space-x-8">
         {links.map((link, i) => (
           <li key={i}>
@@ -65,7 +63,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      
+      {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`${scrolled ? "text-black" : "text-white"} md:hidden`}
@@ -73,25 +71,36 @@ const Navbar = () => {
         <ImMenu2 size={26} />
       </button>
 
-      
+      {/* Mobile Menu */}
       {isOpen && (
-        <ul className="absolute top-14 right-2 w-[90vw] bg-white/90 backdrop-blur-lg flex flex-col items-center space-y-3 py-5 rounded-xl border border-gray-200 shadow-xl md:hidden">
-          {links.map((link, i) => (
-            <li key={i}>
-              <Link
-                to={link.path}
-                className={`${
-                  location.pathname === link.path
-                    ? "text-[#00F1FF] font-semibold"
-                    : "text-black hover:text-[#00F1FF]"
-                } text-lg`}
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="fixed inset-0 w-full h-full bg-white/95 backdrop-blur-lg z-[100] flex flex-col md:hidden">
+          {/* Close Button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 right-6 text-3xl font-bold text-gray-700"
+          >
+            ✕
+          </button>
+
+          {/* Links */}
+          <ul className="flex flex-col items-center justify-center flex-1 space-y-10 overflow-y-auto">
+            {links.map((link, i) => (
+              <li key={i}>
+                <Link
+                  to={link.path}
+                  className={`${
+                    location.pathname === link.path
+                      ? "text-[#00F1FF] font-semibold"
+                      : "text-black hover:text-[#00F1FF]"
+                  } text-xl`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </nav>
   );
