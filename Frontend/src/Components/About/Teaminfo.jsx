@@ -81,26 +81,7 @@ const Teaminfo = () => {
                   {member.role}
                 </p>
 
-                <div className="flex justify-center gap-4">
-                  <a
-                    href={member.linkedin}
-                    className="p-2 bg-[#5364FF]/10 rounded-full hover:bg-[#5364FF] hover:text-white transition"
-                  >
-                    <FaLinkedin />
-                  </a>
-                  <a
-                    href={member.facebook}
-                    className="p-2 bg-[#FFAB3C]/10 rounded-full hover:bg-[#FFAB3C] hover:text-white transition"
-                  >
-                    <FaFacebookF />
-                  </a>
-                  <a
-                    href={member.instagram}
-                    className="p-2 bg-[#00F1FF]/10 rounded-full hover:bg-[#00F1FF] hover:text-white transition"
-                  >
-                    <FaInstagram />
-                  </a>
-                </div>
+              
               </div>
             </div>
           ))}

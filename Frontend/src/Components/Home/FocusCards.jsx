@@ -2,9 +2,9 @@ import { FocusCards } from "../ui/focus-cards";
 import EventManagement from '../../assets/EventManagement.jpg'
 import Ground_Reacher from '../../assets/Ground_Reacher.jpg'
 import Media from '../../assets/Media.jpg'
-import Public_Relations from '../../assets/Public_Relations.jpg'
-import Filed_Work from '../../assets/Filed_Work.jpg'
 import SocialMedia from '../../assets/SocialMedia.jpg'
+import Filedwork from '../../assets/Filedwork.jpg'
+import Publice from '../../assets/Publice.jpg'
 export function FocusCardsDemo() {
   const cards = [
     {
@@ -21,11 +21,11 @@ export function FocusCardsDemo() {
     },
     {
       title: "Public Relations",
-      src: Public_Relations,
+      src: Publice,
     },
     {
       title: "Field Work ",
-      src: Filed_Work,
+      src: Filedwork,
     },
     {
       title: "Ground Research ",

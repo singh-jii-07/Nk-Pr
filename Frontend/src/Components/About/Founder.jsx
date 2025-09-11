@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FounderImage from "../../assets/Founder.jpg"; 
+import FounderImage from "../../assets/Ceo.jpg"; 
 import { FaLinkedin, FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Founder = () => {
@@ -35,7 +35,7 @@ const Founder = () => {
               
               
               <div className="bg-[#5364FF] text-white text-center py-3 rounded-b-lg mt-2">
-                <h3 className="text-lg font-bold tracking-wide">Nilesh Singh</h3>
+                <h3 className="text-lg font-bold tracking-wide">Nishant Singh</h3>
                 <p className="text-sm opacity-90">Founder & CEO, NKPR Promotions</p>
               </div>
             </div>
@@ -66,26 +66,7 @@ const Founder = () => {
             </p>
 
             
-            <div className="flex gap-5">
-              <Link
-                to="#"
-                className="p-3 rounded-full border border-gray-300 text-gray-600 hover:bg-[#5364FF] hover:text-white hover:border-[#5364FF] transition duration-300"
-              >
-                <FaLinkedin size={20} />
-              </Link>
-              <Link
-                to="#"
-                className="p-3 rounded-full border border-gray-300 text-gray-600 hover:bg-[#5364FF] hover:text-white hover:border-[#5364FF] transition duration-300"
-              >
-                <FaFacebookF size={20} />
-              </Link>
-              <Link
-                to="#"
-                className="p-3 rounded-full border border-gray-300 text-gray-600 hover:bg-[#5364FF] hover:text-white hover:border-[#5364FF] transition duration-300"
-              >
-                <FaInstagram size={20} />
-              </Link>
-            </div>
+      
           </div>
         </div>
       </div>
