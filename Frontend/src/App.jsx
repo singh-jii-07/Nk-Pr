@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Servies from "./Pages/Servies";
-
+import ScrollToTop from './Components/ScrollToTop'
 import Footer from "./Components/Footer/Footer";
 
 
@@ -16,6 +16,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar/>
+        <ScrollToTop/>
         <Home/>
         <Footer/>
       </div>
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar/>
+        <ScrollToTop/>
        <About/>
        <Footer/>
       </div>
@@ -36,6 +38,7 @@ const router = createBrowserRouter([
     element: (
       <div>
       <Navbar/>
+      <ScrollToTop/>
         <Servies/>
         <Footer/>
       </div>
@@ -46,6 +49,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar/>
+        <ScrollToTop/>
         <Contact/>
         <Footer/>
       </div>

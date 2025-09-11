@@ -7,7 +7,7 @@ import CallToAction from '../Components/Home/CallToAction';
 import AchievementsExperience from '../Components/Home/Exprience'
 import HowWeWor from '../Components/Home/Working'
 // import Gallery from '../Components/Home/Gallery';
-import { FocusCardsDemo } from '../Components/Home/FocusCards';
+import { FocusCardsDemo } from '../Components/Home/FocusCards'
 const Home = () => {
 return(
   

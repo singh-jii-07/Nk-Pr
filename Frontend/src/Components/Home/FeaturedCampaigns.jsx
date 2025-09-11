@@ -1,48 +1,85 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ModiBhai from "../../assets/ModiBhai.jpg";
+import Cm_assam from "../../assets/Cm_assam.jpg";
+import Ravindar from "../../assets/Ravindar.jpg";
+import Vdram from "../../assets/Vdram.jpg";
+import BidyutBaran from "../../assets/BidyutBaran.jpg";
+import Padamshree from "../../assets/Padamshree.jpg";
+import AjayMahawar from "../../assets/AjayMahawar.jpg";
+import ShriGanga from "../../assets/ShriGanga.jpg";
+import ArjunMunda from "../../assets/ArjunMunda.jpg";
+import AparnaSen from "../../assets/AparnaSen.jpg";
+import RatnakarMishra from "../../assets/RatnakarMishra.jpg";
+import ShantanuThakur from "../../assets/ShantanuThakur.jpg";
+import ManaglPandey from "../../assets/ManaglPandey.jpg";
+import SamratChaudhary from "../../assets/SamratChaudhary.jpg";
+import ShivrajSinghChauhan from "../../assets/ShivrajSinghChauhan.jpg";
+import ArunKumar from "../../assets/ArunKumar.jpg";
+import RiturajKumar from "../../assets/RiturajKumar.jpg";
+import GaneshSingh from "../../assets/GaneshSingh.jpg";
 
 const FeaturedClients = () => {
   const clients = [
-    {
-      name: "Jharkhand Vidhan Sabha Election 2019",
-      category: "Political Campaign",
-      image:
-        "https://imgs.search.brave.com/yG3ElRB9TztbDiaAnY-Ug5SVIUp3pb2FRTxJmrj65Uo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucm95b29yZGVy/cy5jb20vaW5zZWN1/cmUvZml0LzUwMC81/MDAvY2UvMC9wbGFp/bi9odHRwczovL3Zv/dGVzbWFydC5zMy5h/cC1zb3V0aC0xLmFt/YXpvbmF3cy5jb20v/Y2FuZGlkYXRlXzE3/Mzk1MC9wcm9jZXNz/ZWRfOTMzNjIyLmpw/Z0B3ZWJw",
-      description:
-        "Led the complete PR & advertising strategy for Jharkhand Vidhan Sabha Election 2019, covering social media, media coverage, and ground campaigning."
-    },
-    {
-      name: "Bihar Assembly Election",
-      category: "Political Campaign",
-      image:
-        "https://imgs.search.brave.com/wyCBW7daBnIFql0uJn5aHLYi-Ve5n-gXtClWB032k8U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zY29u/dGVudC1kZnc1LTMu/eHguZmJjZG4ubmV0/L3YvdDM5LjMwODA4/LTYvNDgxNTY2MzY4/XzEyMzY5MTExNTEx/MjY2NDNfMjgxNDY1/NjE3MzM0NjUxNDYw/N19uLmpwZz9zdHA9/ZHN0LWpwZ19zOTYw/eDk2MF90dDYmX25j/X2NhdD0xMDgmY2Ni/PTEtNyZfbmNfc2lk/PWNjNzFlNCZfbmNf/b2hjPUtHcmJwN0d0/cE1FUTdrTnZ3RTAy/NXRfJl9uY19vYz1B/ZG5COWd0V3Q0enNn/YmtOdGdIQ09iWks0/YWwzNWxYc0FQczdk/d2JTa3VSNlZ1eGsw/T2RzUkRXY09PZ3Rh/V3pVdzFFJl9uY196/dD0yMyZfbmNfaHQ9/c2NvbnRlbnQtZGZ3/NS0zLnh4Jl9uY19n/aWQ9MElyZktDalct/Z2ItNFo0eVdVR01s/USZvaD0wMF9BZlVJ/dGloal9XN1kweTkw/NFJjcFpOQVZCd0M4/eHdXN1IzY1pucGFM/VEFvd293Jm9lPTY4/OUE5RjI2",
-      description:
-        "Handled political PR, advertisement, and outreach for Bihar Assembly Election with impactful branding and mass communication strategies."
-    },
-    {
-      name: "Governor of Sikkim",
-      category: "Political PR",
-      image:
-        "https://imgs.search.brave.com/y57_Rt58bF2k4aKNkrkObaJoDaWsQxyYZPXim4ujDMA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudHY5aGluZGku/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIzLzAyL0xha3No/bWFuLVByYXNhZC1B/Y2hhcnlhLVNpa2tp/bS1OZXctR292ZXJu/b3IuanBnP3c9MTI4/MA",
-      description:
-        "Managed official PR and media presence for the Governor of Sikkim, ensuring strong public and media relations."
-    },
-    {
-      name: "Members of Parliament PR",
-      category: "Political PR",
-      image:
-        "https://imgs.search.brave.com/CF8xkJhsHYYKYL7_UEXMAreP_sd3YrdGyirsPfMoiho/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly92b3Rl/cnN2ZXJkaWN0LmNv/bS9pbWFnZXMvamhh/cmtoYW5kL3BvbGl0/aWNpYW5zL2JoYXJh/dGl5YS1qYW5hdGEt/cGFydHkvMTcwODUx/NDczOS5iaWR5dXQt/YmFyYW4tbWFoYXRv/LWJqcC53ZWJw",
-      description:
-        "Provided PR services for multiple MPs including Shri Vidhyut Baran Mahato, Shri VD Ram, Shri PN Singh, and Shri Sushil Singh."
-    }
+    { name: "Dr Ravindra Kumar Ray Our Guardian and Working State President BJP Jharkhand", image: Ravindar },
+    { name: "Honorable PM Shri Narendra Modi During Bengal Election 2021", image: ModiBhai },
+    { name: "Himanta Biswa Sarma (CM Assam)", image: Cm_assam },
+    { name: "VD Ram MP Palamu Loksabha", image: Vdram },
+    { name: "Shri Bidyut Baran Mahato MP, Jamshedpur Loksabha", image: BidyutBaran },
+    { name: "Padamshree Ashok Bhagat Ji", image: Padamshree },
+    { name: "Ajay Mahawar Chief WHIP BJP and MLA from Delhi's Ghonda Constituency", image: AjayMahawar },
+    { name: "Shri Ganga Narayan Singh Governer Sikkim", image: ShriGanga },
+    { name: "Arjun Munda EX CM Jharkhand and EX central Minister", image: ArjunMunda },
+    { name: "Aparna Sen Gupta EX MLA Nirsa", image: AparnaSen },
+    { name: "Shri Ratnakar Mishra MLA of Vindhyachal Constituency UP", image: RatnakarMishra },
+    { name: "Shantanu Thakur MOS Port and Shipping Govt of India", image: ShantanuThakur },
+    { name: "Managl Pandey Health Minister Bihar", image: ManaglPandey },
+    { name: "Samrat Chaudhary Deputy CM Bihar", image: SamratChaudhary },
+    { name: "Shivraj Singh Chauhan, Minister of Agriculture Reform Govt of India", image: ShivrajSinghChauhan },
+    { name: "Dr Arun Kumar EX MP Jehanabad Bihar", image: ArunKumar },
+    { name: "Rituraj Kumar", image: RiturajKumar },
+    { name: "Ganesh Singh", image: GaneshSingh },
   ];
 
-  const [active, setActive] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640); // sm breakpoint
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Auto-slide
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % clients.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [clients.length]);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
+  // Get visible cards
+  const getVisibleClients = () => {
+    if (isMobile) {
+      return [{ ...clients[activeIndex], position: "active" }];
+    }
+    const left = (activeIndex - 1 + clients.length) % clients.length;
+    const right = (activeIndex + 1) % clients.length;
+    return [
+      { ...clients[left], position: "left" },
+      { ...clients[activeIndex], position: "active" },
+      { ...clients[right], position: "right" },
+    ];
+  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-[#f5f9ff] to-white">
@@ -54,69 +91,68 @@ const FeaturedClients = () => {
           Featured <span className="text-[#5364FF]">Clients & Campaigns</span>
         </h2>
 
-        <div className="flex flex-col lg:flex-row gap-8 items-center">
-          {/* Active Client Card */}
-          <div
-            key={active}
-            data-aos="zoom-in"
-            className="flex-1 rounded-2xl shadow-xl transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl w-full"
-            style={{
-              background: "linear-gradient(145deg, #ffffff, #e6ecff)",
-              border: "1px solid rgba(255,255,255,0.3)"
-            }}
-          >
-            <div className="relative overflow-hidden rounded-t-2xl">
-              <img
-                src={clients[active].image}
-                alt={clients[active].name}
-                className="w-full h-56 sm:h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105"
-              />
-              <span className="absolute top-4 left-4 bg-[#5364FF] text-white text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-full shadow-md">
-                {clients[active].category}
-              </span>
+        {/* Carousel */}
+        <div className="flex justify-center items-center gap-6" data-aos="fade-up">
+          {getVisibleClients().map((client, idx) => (
+            <div
+              key={idx}
+              className={`transition-all duration-700 ease-in-out rounded-2xl shadow-lg overflow-hidden cursor-pointer
+                ${
+                  client.position === "active"
+                    ? "w-[300px] sm:w-[360px] z-20 scale-105"
+                    : "w-[240px] sm:w-[280px] opacity-60 hidden sm:block"
+                }`}
+              style={{
+                background: "linear-gradient(145deg, #ffffff, #e6ecff)",
+                border: "1px solid rgba(255,255,255,0.3)",
+              }}
+            >
+              <div className="relative h-[250px] sm:h-[300px]">
+                <img
+                  src={client.image}
+                  alt={client.name}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div className="p-4 sm:p-6 bg-white">
+                <h3 className="text-sm sm:text-lg font-semibold text-gray-800 text-center line-clamp-3">
+                  {client.name}
+                </h3>
+              </div>
             </div>
+          ))}
+        </div>
 
-            <div className="p-4 sm:p-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3">
-                {clients[active].name}
-              </h3>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                {clients[active].description}
-              </p>
-            </div>
-          </div>
-
-          {/* Thumbnails */}
-          <div
-            className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:flex lg:flex-col gap-4 sm:gap-5"
-            data-aos="fade-left"
-          >
-            {clients.map((client, index) => (
+        {/* Circles */}
+        <div
+          className="flex justify-center items-center gap-4 flex-wrap mt-12"
+          data-aos="fade-left"
+        >
+          {clients.map((client, idx) => (
+            <div
+              key={idx}
+              onClick={() => setActiveIndex(idx)}
+              className={`cursor-pointer rounded-full p-[2px] transition-all duration-500 hover:scale-110 ${
+                activeIndex === idx
+                  ? "bg-gradient-to-r from-[#00F1FF] to-[#5364FF]"
+                  : "bg-transparent"
+              }`}
+            >
               <div
-                key={index}
-                onClick={() => setActive(index)}
-                className={`cursor-pointer rounded-full p-1 transition-all duration-500 hover:scale-110 ${
-                  active === index
-                    ? "bg-gradient-to-r from-[#00F1FF] to-[#5364FF] p-[3px]"
-                    : "bg-transparent"
+                className={`rounded-full overflow-hidden border-2 ${
+                  activeIndex === idx
+                    ? "border-transparent"
+                    : "border-gray-200 hover:border-[#FFAB3C]"
                 }`}
               >
-                <div
-                  className={`rounded-full overflow-hidden border-2 sm:border-4 ${
-                    active === index
-                      ? "border-transparent"
-                      : "border-gray-200 hover:border-[#FFAB3C]"
-                  }`}
-                >
-                  <img
-                    src={client.image}
-                    alt={client.name}
-                    className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-cover rounded-full"
-                  />
-                </div>
+                <img
+                  src={client.image}
+                  alt={client.name}
+                  className="w-12 h-12 sm:w-14 sm:h-14 object-cover rounded-full"
+                />
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

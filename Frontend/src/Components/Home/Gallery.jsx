@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import {EventManagement} from '../../assets/EventManagement.jpg'
 
 const Gallery = () => {
    useEffect(() => {
       AOS.init({ duration: 1000, once: true });
     }, []);
   const galleryItems = [
-    { img: "https://imgs.search.brave.com/P3PGWPBTvw2r3voprcr41Hrc5wvCe543J7w0UV9l78k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmVz/cy5mYXJtL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzAzL3Bv/bGl0aWNhbC1wci0x/LnBuZw", title: "Event Management" },
+    { img:{EventManagement}, title: "Event Management" },
     { img: "https://imgs.search.brave.com/P3PGWPBTvw2r3voprcr41Hrc5wvCe543J7w0UV9l78k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmVz/cy5mYXJtL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzAzL3Bv/bGl0aWNhbC1wci0x/LnBuZw", title: "Press Coverage" },
     { img: "https://imgs.search.brave.com/P3PGWPBTvw2r3voprcr41Hrc5wvCe543J7w0UV9l78k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmVz/cy5mYXJtL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzAzL3Bv/bGl0aWNhbC1wci0x/LnBuZw", title: "Social Media Campaign" },
     { img: "https://imgs.search.brave.com/P3PGWPBTvw2r3voprcr41Hrc5wvCe543J7w0UV9l78k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmVz/cy5mYXJtL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzAzL3Bv/bGl0aWNhbC1wci0x/LnBuZw", title: "Brand Promotion" },

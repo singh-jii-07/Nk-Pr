@@ -15,7 +15,7 @@ export const Card = React.memo(({
       "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
       hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
     )}>
-    <img src={card.src} alt={card.title} className="object-cover absolute inset-0" />
+    <img src={card.src} alt={card.title} className="object-cover absolute inset-0 w-full h-full" />
     <div
       className={cn(
         "absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",

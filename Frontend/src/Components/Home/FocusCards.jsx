@@ -1,30 +1,35 @@
 import { FocusCards } from "../ui/focus-cards";
-
+import EventManagement from '../../assets/EventManagement.jpg'
+import Ground_Reacher from '../../assets/Ground_Reacher.jpg'
+import Media from '../../assets/Media.jpg'
+import Public_Relations from '../../assets/Public_Relations.jpg'
+import Filed_Work from '../../assets/Filed_Work.jpg'
+import SocialMedia from '../../assets/SocialMedia.jpg'
 export function FocusCardsDemo() {
   const cards = [
     {
       title: "Event Management",
-      src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src:EventManagement,
     },
     {
       title: "Press Coverage",
-      src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: Media,
     },
     {
       title: "Social Media Campaign",
-      src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: SocialMedia,
     },
     {
       title: "Public Relations",
-      src: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: Public_Relations,
     },
     {
-      title: "Product Launch",
-      src: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Field Work ",
+      src: Filed_Work,
     },
     {
-      title: "Brand Promotion",
-      src: "https://assets.aceternity.com/the-first-rule.png",
+      title: "Ground Research ",
+      src:Ground_Reacher ,
     },
   ];
 
