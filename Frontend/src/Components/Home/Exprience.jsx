@@ -13,6 +13,7 @@ function useCountUp(target, duration = 1500) {
   const [count, setCount] = useState(0);
   useEffect(() => {
     let start = 0;
+    
     const step = Math.ceil(target / (duration / 16));
     const timer = setInterval(() => {
       start += step;
