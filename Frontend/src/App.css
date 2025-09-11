@@ -1,0 +1,63 @@
+/* ✅ Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* ✅ Track (background area) */
+::-webkit-scrollbar-track {
+  background: #0f172a; /* Dark navy background */
+  border-radius: 10px;
+}
+
+/* ✅ Thumb (jo move hota hai) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff6a00, #ee0979, #7f00ff, #00dbde);
+  border-radius: 10px;
+  border: 2px solid #0f172a; /* gap effect */
+  background-size: 300% 300%;
+  animation: scrollbarGradient 6s ease infinite;
+}
+
+/* ✅ Hover pe aur glow effect */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00dbde, #7f00ff, #ee0979, #ff6a00);
+  background-size: 300% 300%;
+  animation: scrollbarGradient 4s ease infinite;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.7),
+              0 0 20px rgba(0, 191, 255, 0.6);
+}
+
+/* ✅ Animation for smooth gradient flow */
+@keyframes scrollbarGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✅ Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6a00 #0f172a;
+}
+
+/* ✅ Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* ✅ Animated Gradient Background */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ff6a00, #ee0979, #7f00ff, #00dbde);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+/* ✅ Gradient Animation Keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

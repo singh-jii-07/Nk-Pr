@@ -8,7 +8,7 @@ import Contact from "./Pages/Contact";
 import Servies from "./Pages/Servies";
 import ScrollToTop from './Components/ScrollToTop'
 import Footer from "./Components/Footer/Footer";
-
+import Cursor from './Components/Cursor'
 
 const router = createBrowserRouter([
   {
@@ -59,7 +59,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <Cursor /> 
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;
