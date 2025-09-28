@@ -44,20 +44,8 @@
 html {
   scroll-behavior: smooth;
 }
-/* ✅ Animated Gradient Background */
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background: linear-gradient(-45deg, #ff6a00, #ee0979, #7f00ff, #00dbde);
-  background-size: 400% 400%;
-  animation: gradientBG 12s ease infinite;
-}
+
 
 /* ✅ Gradient Animation Keyframes */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+
 
