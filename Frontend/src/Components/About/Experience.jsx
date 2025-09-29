@@ -53,6 +53,13 @@ const experiences = [
       "Led state-wide strategies, voter sentiment analysis & data-driven political outreach.",
     icon: <FaChartLine className="text-purple-600 text-3xl" />,
   },
+   {
+    year: "2025",
+    title: "Bihar Assembly Election",
+    description:
+      "Conducted on-ground research across all 246 seat constituencies, gathering insights and voter data to strengthen campaign strategy.",
+    icon: <FaUsers className="text-red-600 text-3xl" />,
+  },
 ];
 
 const Experience = () => {

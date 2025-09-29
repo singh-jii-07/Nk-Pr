@@ -19,6 +19,7 @@ import ShivrajSinghChauhan from "../../assets/ShivrajSinghChauhan.jpg";
 import ArunKumar from "../../assets/ArunKumar.jpg";
 import RiturajKumar from "../../assets/RiturajKumar.jpg";
 import GaneshSingh from "../../assets/GaneshSingh.jpg";
+import NandKishore from '../../assets/NandKishore .jpg'
 
 const FeaturedClients = () => {
   const clients = [
@@ -40,6 +41,7 @@ const FeaturedClients = () => {
     { name: "Dr Arun Kumar EX MP Jehanabad Bihar", image: ArunKumar },
     { name: "Rituraj Kumar", image: RiturajKumar },
     { name: "Ganesh Singh", image: GaneshSingh },
+    {name:"Nand Kishore Yadav (Speaker Bihar Vidhansabha)", image:NandKishore}
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);

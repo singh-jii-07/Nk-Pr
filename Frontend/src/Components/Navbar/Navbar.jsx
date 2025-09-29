@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ImMenu2 } from "react-icons/im";
-import Logo from '../../assets/NEW LOGO 1-01.png'
+import Logo from '../../assets/NEW LOGO 1-01.png'; // colored logo after scroll
+import Logo01 from '../../assets/NEW LOGO W-01.png'; // white logo on top
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,20 +11,14 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
-    setIsOpen(false);
+    setIsOpen(false); // close mobile menu on route change
   }, [location.pathname]);
 
   const links = [
@@ -38,7 +33,7 @@ const Navbar = () => {
       location.pathname === path
         ? "text-[#00F1FF] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-[#00F1FF]"
         : scrolled
-        ? "text-black hover:text-[#FFAB3C]" 
+        ? "text-black hover:text-[#FFAB3C]"
         : "text-white hover:text-[#FFAB3C]"
     }`;
 
@@ -51,16 +46,16 @@ const Navbar = () => {
       } flex items-center justify-between`}
       style={{ maxWidth: "100vw" }}
     >
-      <Link
-        to="/"
-        className={`text-lg sm:text-2xl font-bold tracking-wide ${
-          scrolled ? "text-black" : "text-white"
-        }`}
-        style={{ whiteSpace: "nowrap" }}
-      >
-        <img src={Logo} alt="" className="h-16" />
+      {/* Logo */}
+      <Link to="/" className={`text-lg sm:text-2xl font-bold tracking-wide`} style={{ whiteSpace: "nowrap" }}>
+        <img
+          src={scrolled ? Logo : Logo01} // <-- swap logos on scroll
+          alt="Logo"
+          className="h-16 transition-all duration-500"
+        />
       </Link>
 
+      {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-6 lg:space-x-8">
         {links.map((link, i) => (
           <li key={i}>
@@ -71,6 +66,7 @@ const Navbar = () => {
         ))}
       </ul>
 
+      {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`${scrolled ? "text-black" : "text-white"} md:hidden`}
@@ -85,7 +81,7 @@ const Navbar = () => {
           <ul
             className="absolute top-16 right-2 left-2 mx-auto w-[96vw] max-w-xs bg-white/95 backdrop-blur-lg flex flex-col items-center space-y-3 py-6 rounded-xl border border-gray-200 shadow-xl"
             style={{ maxWidth: "96vw" }}
-            onClick={e => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           >
             {links.map((link, i) => (
               <li key={i} className="w-full text-center">
@@ -109,4 +105,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

@@ -1,41 +1,31 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaLinkedin, FaFacebookF, FaInstagram } from "react-icons/fa";
-import image from "../../assets/Founder.jpg";
+import pallav from '../../assets/pallav.jpg'
+import Raghav from '../../assets/Raghav.jpg'
+import Editor from '../../assets/Editor.jpg'
+import Photo01 from '../../assets/Photo01.jpg'
 
 const teamMembers = [
   {
-    name: "Amit Sharma",
-    role: "Campaign Strategist",
-    img: image,
-    linkedin: "#",
-    facebook: "#",
-    instagram: "#",
+    name: "Pallav Saikia",
+    role: "Project Manager (Assam)",
+    img: pallav,
   },
   {
-    name: "Priya Verma",
-    role: "Digital PR Head",
-    img: image,
-    linkedin: "#",
-    facebook: "#",
-    instagram: "#",
-  },
-  {
-    name: "Ravi Kumar",
-    role: "Field Operations",
-    img: image,
-    linkedin: "#",
-    facebook: "#",
-    instagram: "#",
-  },
-  {
-    name: "Sneha Patel",
+    name: "Raghav Kumar Upadhyay",
     role: "Creative Designer",
-    img: image,
-    linkedin: "#",
-    facebook: "#",
-    instagram: "#",
+    img: Raghav,
+  },
+  {
+    name: "Shrvan kumar ",
+    role: "Photographer",
+    img: Photo01,
+  },
+  {
+    name: "Mayur",
+    role: "Video & Photo Editor", 
+    img: Editor,
   },
 ];
 

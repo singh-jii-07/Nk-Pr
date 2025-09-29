@@ -1,45 +1,52 @@
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import hero from '../../assets/Calltoaction.png'
 
 export default function JoinUsBanner() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-black bg-opacity-95 relative overflow-hidden my-10">
-      
+    <section className="relative w-full overflow-hidden py-28 bg-gradient-to-b from-gray-900 via-black to-gray-900">
+      {/* Background pattern overlay */}
       <div
-        className="w-full flex justify-center items-center py-16 relative z-10"
+        className="absolute inset-0 opacity-10"
         style={{
-          backgroundImage:
-            "url('https://www.transparenttextures.com/patterns/hexellence.png')",
-          backgroundSize: "auto",
+          backgroundImage: `url(${hero})`,
           backgroundRepeat: "repeat",
-          backgroundPosition: "center",
+          backgroundSize: "auto",
         }}
-      >
-        <div className="text-center max-w-xl px-6">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#00f1ff] drop-shadow-lg">
-            Join NKPR Today
-          </h1>
-          <p className="text-gray-300 mb-8 text-lg md:text-xl drop-shadow-sm">
-            Become part of a community that crafts compelling stories, builds
-            lasting relationships, and drives impactful brand engagement.
-          </p>
-         
-<button
-      className="bg-[#00f1ff] hover:bg-[#00c1e0] text-black font-bold px-8 py-3 rounded-full flex items-center mx-auto gap-3 shadow-lg transition-all duration-300"
-      onClick={() => navigate("/contact")}
-    >
-      Join Us
-      <FaArrowRight className="w-5 h-5" />
-    </button>
+      />
 
-         
-        </div>
+      {/* Floating gradient circles for depth */}
+      <div className="absolute top-10 left-1/4 w-36 h-36 bg-[#00f1ff]/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-16 right-1/3 w-48 h-48 bg-[#00c1e0]/20 rounded-full blur-3xl animate-pulse delay-300"></div>
+      <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-[#ff00f1]/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+
+      {/* Central radial glow */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-[800px] h-[800px] bg-[#00f1ff]/5 rounded-full blur-[300px]"></div>
       </div>
 
-      
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/80 to-black/90 pointer-events-none"></div>
-    </div>
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#00f1ff] to-[#00c1e0] drop-shadow-[0_0_15px_rgba(0,241,255,0.6)] mb-6 animate-fadeInUp">
+          Join NKPR Today
+        </h1>
+        <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl leading-relaxed animate-fadeInUp delay-150">
+          We are the fastest-growing PR agency in Bihar & Jharkhand with 10+ years
+          of expertise in political campaigns, media handling, and social media strategy.
+        </p>
+
+        <button
+          onClick={() => navigate("/contact")}
+          className="flex items-center gap-4 bg-gradient-to-r from-[#00f1ff] to-[#00c1e0] hover:scale-105 transform transition-all duration-300 text-black font-semibold px-14 py-4 rounded-full shadow-2xl shadow-[#00f1ff]/40 hover:shadow-[#00c1e0]/50"
+        >
+          Join Us <FaArrowRight className="w-5 h-5" />
+        </button>
+      </div>
+
+      {/* Optional subtle bottom wave */}
+      <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-gray-900 to-transparent" />
+    </section>
   );
 }
