@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import pallav from '../../assets/pallav.jpg'
+import pallav from "../../assets/pallav.jpg";
 import Raghav from '../../assets/Raghav.jpg'
 import Editor from '../../assets/Editor.jpg'
 import Photo01 from '../../assets/Photo01.jpg'
