@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import hero from '../../assets/Service-hero.avif'
 
 export default function ServicesPage() {
   useEffect(() => {
@@ -15,7 +16,7 @@ export default function ServicesPage() {
   className="relative text-white py-20 overflow-hidden bg-center bg-cover bg-fixed flex items-center"
   style={{
     minHeight: "100vh",
-    backgroundImage: `url('https://images.unsplash.com/photo-1522205408450-add114ad53fe?auto=format&fit=crop&w=1600&q=80')`,
+    backgroundImage:`url(${hero})`
   }}
 >
   <div className="absolute inset-0 bg-black/70" />

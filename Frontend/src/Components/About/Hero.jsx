@@ -1,6 +1,7 @@
 import React from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import hero from '../../assets/Service-hero.avif'
 
 
 const AboutBanner = () => {
@@ -12,8 +13,7 @@ const AboutBanner = () => {
     <section
       className="relative text-white py-10 overflow-hidden bg-center bg-cover bg-fixed"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1522205408450-add114ad53fe?auto=format&fit=crop&w=1600&q=80')`,
-      }}
+        backgroundImage:`url(${hero})` }}
     >
       
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/40"></div>

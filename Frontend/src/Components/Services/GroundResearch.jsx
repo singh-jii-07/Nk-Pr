@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaMapMarkedAlt, FaChartBar, FaClipboardCheck, FaUsers } from "react-icons/fa";
+import img from '../../assets/Ground.png'
 
 const GroundResearch = () => {
   useEffect(() => {
@@ -38,7 +39,7 @@ const GroundResearch = () => {
         className="relative bg-fixed bg-center bg-cover h-[65vh] flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('https://press.farm/wp-content/uploads/2023/03/political-pr-1.png')", 
+            `url(${img})`,
           
         }}
       >

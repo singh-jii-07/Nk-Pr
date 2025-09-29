@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import hero from '../../assets/Home-hero.webp'
 
 const Hero = () => {
   useEffect(() => {
@@ -12,9 +13,9 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center text-white text-center px-4 sm:px-6 py-16"
       style={{
         backgroundImage:
-          "url('https://imgs.search.brave.com/ebKLxUBXqc4YgrhdDNzP7uvpd9lac0RAHhOmsyCjSI0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzcyLzRj/LzMwLzcyNGMzMGUw/OGUxYjJhNmZhYTZj/ZTM3ZmNkOWY0MDcx/LmpwZw')",
+         `url(${hero})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center"
       }}
     >
      

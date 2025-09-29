@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import hero from '../../assets/Contact-hero.avif'
 
 const Hero = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const Hero = () => {
       className="relative bg-fixed bg-center bg-cover h-[60vh] flex items-center justify-center"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=1920&q=80')",
+         `url(${hero})`,
       }}
     >
     

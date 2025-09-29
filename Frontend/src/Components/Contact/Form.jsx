@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css"
+import img from '../../assets/form-img.avif'
+import hero from '../../assets/Contact-hero.avif'
 
 const ContactSection = () => {
   const [selectedServices, setSelectedServices] = useState([]);
@@ -173,12 +175,12 @@ const ContactSection = () => {
         
         <div className="space-y-6">
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+            src={img}
             alt="Teamwork"
             className="rounded-2xl shadow-lg hover:scale-105 transition"
           />
           <img
-            src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&q=80"
+            src={hero}
             alt="Campaign"
             className="rounded-2xl shadow-lg hover:scale-105 transition"
           />

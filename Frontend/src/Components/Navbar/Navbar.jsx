@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ImMenu2 } from "react-icons/im";
+import Logo from '../../assets/NEW LOGO 1-01.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +58,7 @@ const Navbar = () => {
         }`}
         style={{ whiteSpace: "nowrap" }}
       >
-        NK PR
+        <img src={Logo} alt="" className="h-16" />
       </Link>
 
       <ul className="hidden md:flex space-x-6 lg:space-x-8">
