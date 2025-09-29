@@ -14,7 +14,7 @@ const teamMembers = [
   },
   {
     name: "Raghav Kumar Upadhyay",
-    role: "Creative Designer",
+    role: "Project Manager (Hindi)",
     img: Raghav,
   },
   {
